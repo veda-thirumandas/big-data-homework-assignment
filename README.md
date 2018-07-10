@@ -1,26 +1,8 @@
 
 
 ```python
-
+# Credentials are hidden
 import ibmos2spark
-
-# @hidden_cell
-credentials = {
-    'endpoint': 'https://s3-api.us-geo.objectstorage.service.networklayer.com',
-    'api_key': 'iavVcVqTHtrhyMOqsMSuTdYZCqaa94Jpyu3zzTJoubTi',
-    'service_id': 'iam-ServiceId-413d609d-bb8b-4322-903b-1c62138667c6',
-    'iam_service_endpoint': 'https://iam.ng.bluemix.net/oidc/token'}
-
-configuration_name = 'os_281ff1d7223247ceb85a02769ab11f1a_configs'
-cos = ibmos2spark.CloudObjectStorage(sc, credentials, configuration_name, 'bluemix_cos')
-
-from pyspark.sql import SparkSession
-spark = SparkSession.builder.getOrCreate()
-# Please read the documentation of PySpark to learn more about the possibilities to load data files.
-# PySpark documentation: https://spark.apache.org/docs/2.0.1/api/python/pyspark.sql.html#pyspark.sql.SparkSession
-# The SparkSession object is already initialized for you.
-# The following variable contains the path to your file on your IBM Cloud Object Storage.
-path_1 = cos.url('user.json.bz2', 'spring2018veda7abe03040343431897343076417c41c8')
 
 ```
 
